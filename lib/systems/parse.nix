@@ -594,6 +594,10 @@ rec {
         execFormat = elf;
         families = { inherit bsd; };
       };
+      fuchsia = {
+        execFormat = elf;
+        families = { };
+      };
       none = {
         execFormat = unknown;
         families = { };
