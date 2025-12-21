@@ -151,6 +151,8 @@ let
             null
           else if final.isNone then
             "newlib"
+          else if final.isFuchsia then
+            "fuchsia"
           # TODO(@Ericson2314) think more about other operating systems
           else
             "native/impure";
@@ -252,6 +254,7 @@ let
             || isMinGW
             || isWindows # Windows
             || isWasm # WASM
+            || isFuchsia
           )
           && !isStatic;
 

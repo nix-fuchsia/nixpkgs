@@ -6994,6 +6994,8 @@ with pkgs;
       relibc
     else if libc == "llvm" then
       llvmPackages_20.libc
+    else if libc == "fuchsia" then
+      fuchsia.libc
     else
       throw "Unknown libc ${libc}";
 
@@ -9987,6 +9989,8 @@ with pkgs;
   windows = recurseIntoAttrs (callPackages ../os-specific/windows { });
 
   cygwin = recurseIntoAttrs (callPackages ../os-specific/cygwin { });
+
+  fuchsia = recurseIntoAttrs (callPackages ../os-specific/fuchsia { });
 
   wpa_supplicant = callPackage ../os-specific/linux/wpa_supplicant { };
 

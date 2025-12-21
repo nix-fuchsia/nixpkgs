@@ -156,6 +156,8 @@ let
       "${sharedLibraryLoader}/libexec/ld-elf.so.1"
     else if targetPlatform.isOpenBSD then
       "${sharedLibraryLoader}/libexec/ld.so"
+    else if targetPlatform.isFuchsia then
+      "${sharedLibraryLoader}/lib/ld.so.1"
     else if hasSuffix "pc-gnu" targetPlatform.config then
       "ld.so.1"
     else

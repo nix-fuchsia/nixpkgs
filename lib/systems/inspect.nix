@@ -319,6 +319,9 @@ rec {
     isLinux = {
       kernel = kernels.linux;
     };
+    isFuchsia = {
+      kernel = kernels.fuchsia;
+    };
     isSunOS = {
       kernel = kernels.solaris;
     };

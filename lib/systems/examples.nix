@@ -409,6 +409,13 @@ rec {
     useLLVM = true;
   };
 
+  # Fuchsia
+  x86_64-fuchsia = {
+    config = "x86_64-unknown-fuchsia";
+    useLLVM = true;
+    linker = "lld";
+  };
+
   #
   # WASM
   #

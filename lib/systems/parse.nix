@@ -876,6 +876,12 @@ rec {
             vendor = elemAt l 1;
             kernel = "cygwin";
           }
+        else if elemAt l 2 == "fuchsia" then
+          {
+            cpu = elemAt l 0;
+            vendor = elemAt l 1;
+            kernel = "fuchsia";
+          }
         else
           throw "system string '${lib.concatStringsSep "-" l}' with 3 components is ambiguous";
       "4" = {
